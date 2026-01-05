@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://3vrsinx8oxyy"]
+[gd_scene load_steps=65 format=3 uid="uid://3vrsinx8oxyy"]
 
 [ext_resource type="Script" uid="uid://c3heyvnsnh3gj" path="res://character.gd" id="1_jb3kq"]
 [ext_resource type="Texture2D" uid="uid://ndp1vg00jset" path="res://Assets/Images/Sprites/Free Bundle/Body Bases Free/Man/Slim/Color (1)/Idle/Man Slim_Back_Idle.png" id="2_c1b4b"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ipbu226w04kp" path="res://Assets/Images/Sprites/Free Bundle/Body Bases Free/Man/Slim/Color (1)/Walk/Man Slim_Back_Walk.png" id="8_lpiy1"]
 [ext_resource type="Texture2D" uid="uid://bgecv4e3mt1cb" path="res://Assets/Images/Sprites/Free Bundle/Body Bases Free/Man/Slim/Color (1)/Walk/Man Slim_Front_Walk.png" id="9_88tkl"]
 [ext_resource type="Texture2D" uid="uid://bstbdanolmm6k" path="res://Assets/Images/Sprites/Free Bundle/Body Bases Free/Man/Slim/Color (1)/Walk/Man_Slim_Side_Walk.png" id="10_y0ipg"]
+[ext_resource type="PackedScene" uid="uid://b4xjub0ripyx7" path="res://stats.tscn" id="11_c1b4b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kjduu"]
 atlas = ExtResource("2_c1b4b")
@@ -424,7 +425,24 @@ height = 124.0
 position = Vector2(571, 326)
 script = ExtResource("1_jb3kq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Nameplate" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -103.0
+offset_right = 55.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "Nameplate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Skin" type="AnimatedSprite2D" parent="."]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_a28ks")
 animation = &"run_back"
@@ -432,3 +450,5 @@ animation = &"run_back"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 2)
 shape = SubResource("CapsuleShape2D_r65re")
+
+[node name="Stats" parent="." instance=ExtResource("11_c1b4b")]
