@@ -2,11 +2,12 @@ extends Area2D
 
 @export var speed = 50
 var direction = "down"
+var screen_size
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	screen_size = get_viewport_rect().size
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -79,3 +80,4 @@ func _process(delta):
 	
 	$AnimatedSprite2D.play()
 	position += velocity * delta
+	position = position.clamp(Vector2.ZERO, screen_size)
