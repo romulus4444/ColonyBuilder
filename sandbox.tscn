@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://bk584btp55mio"]
+[gd_scene load_steps=2 format=3 uid="uid://bk584btp55mio"]
+
+[ext_resource type="PackedScene" uid="uid://3vrsinx8oxyy" path="res://character.tscn" id="1_3h184"]
 
 [node name="Sandbox" type="Node"]
+
+[node name="Tom" parent="." instance=ExtResource("1_3h184")]
+character_name = "Tom"
+
+[node name="Dick" parent="." instance=ExtResource("1_3h184")]
+position = Vector2(440, 185)
+speed = 25
+character_name = "Dick"
+
+[node name="Larry" parent="." instance=ExtResource("1_3h184")]
+position = Vector2(312, 308)
+speed = 100
+character_name = "Larry"

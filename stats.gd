@@ -1,8 +1,8 @@
 extends Node
 
-@export var character_name = "John Doe"
-@export var vision = 6
-@export var gender = "male"
+var character_name = "John Doe"
+var vision = 6
+var gender = "male"
 
 
 

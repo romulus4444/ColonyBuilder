@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var speed = 50
+@export var character_name = "Default"
 var direction = "down"
 var screen_size
 
@@ -8,7 +9,8 @@ var screen_size
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
-	$Nameplate.text = $Stats.character_name
+	character_name = character_name
+	$Nameplate.text = character_name
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
